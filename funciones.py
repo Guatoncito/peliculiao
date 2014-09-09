@@ -16,5 +16,3 @@ def obtener_pelicula(codigo):
     peli = ' '.join(peli)
     return peli
 
-def peliculas_en_comun(u1, u2):
-    
