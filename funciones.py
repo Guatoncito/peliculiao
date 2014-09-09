@@ -34,7 +34,7 @@ def corr(usuario1,usuario2,matriz):
         if matriz[usuario1-1,i]!=0:
             rating1.append(matriz[usuario1-1,i])
         if matriz[usuario2-1,i]!=0:
-            rating2-append(matriz[usuario2-1,i])
+            rating2.append(matriz[usuario2-1,i])
     rating1=sum(rating1)/len(rating1)
     rating2=sum(rating2)/len(rating2)
     peliculas_comunes=peliculas_en_comun(usuario1,usuario2,matriz)
@@ -49,4 +49,17 @@ def peliculas_no_comun(u1, u2, matriz): #Peliculas que u1 ha visto y u2 no
     for i in range(1682):
         if matriz[u1-1, i] != 0 and matriz[u2-1, i] == 0:
             no_comun.append(i+1)
+    return no_comun
+
+def peliculas_no_comun(u1, u2, matriz): #Peliculas que u1 ha visto y u2 no
+    no_comun = list()
+    mayor = 0
+    for i in range(1682):
+        if matriz[u1-1, i] != 0 and matriz[u2-1, i] == 0:
+            if matriz[u1-1, i] > mayor:
+                no_comun = list()
+                no_comun.append(i+1)
+                mayor = matriz[u1-1, i]
+            elif matriz[u1-1, i] == mayor:
+                no_comun.append(i+1)
     return no_comun
