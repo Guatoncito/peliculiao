@@ -22,3 +22,10 @@ def peliculas_en_comun(usuario1,usuario2,matriz):
         if matriz[usuario1-1,i]!=0 and matriz[usuario2-1,i]!=0:
             comun.append(i+1)
     return comun
+
+def peliculas_no_comun(u1, u2, matriz): #Peliculas que u1 ha visto y u2 no
+    no_comun = list()
+    for i in range(1682):
+        if matriz[u1-1, i] != 0 and matriz[u2-1, i] == 0:
+            no_comun.append(i+1)
+    return no_comun
