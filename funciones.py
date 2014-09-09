@@ -4,7 +4,7 @@ def obtener_pelicula(codigo):
     peli = ''
     for linea in peliculas:
         inf = linea.strip().split()
-        if inf[0] == codigo:
+        if int(inf[0]) == codigo:
             for d in inf:
                 c = 0
                 if d[0] != '(' and d != codigo:
@@ -23,5 +23,13 @@ def peliculas_en_comun(usuario1,usuario2,matriz):
             comun.append(i+1)
     return comun
 
-
-
+def corr(usuario1,usuario2,matriz):
+    rating1=list()
+    rating2=list()
+    for i in range(1682):
+        if matriz[usuario1,i]!=0:
+            rating1.append(matriz[usuario1,i])
+        if matriz[usuario2,i]!=0:
+            rating2-append(matriz[usuario2,i])
+    rating1=sum(rating1)/len(rating1)
+    peliculas_comunes=peliculas_en_comun(usuario1,usuario2,matriz)
