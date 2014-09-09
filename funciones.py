@@ -44,12 +44,6 @@ def corr(usuario1,usuario2,matriz):
         sum3+=(matriz[usuario2-1,i-1]-rating2)**2
     correlacion=sum1/((sum2**0.5)*(sum3**0.5))
     return correlacion 
-def peliculas_no_comun(u1, u2, matriz): #Peliculas que u1 ha visto y u2 no
-    no_comun = list()
-    for i in range(1682):
-        if matriz[u1-1, i] != 0 and matriz[u2-1, i] == 0:
-            no_comun.append(i+1)
-    return no_comun
 
 def peliculas_no_comun(u1, u2, matriz): #Peliculas que u1 ha visto y u2 no
     no_comun = list()
