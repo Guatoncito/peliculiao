@@ -1,5 +1,3 @@
-
-=======
 def obtener_pelicula(codigo):
     peliculas = open('movies.txt')
     letras = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
@@ -17,4 +15,6 @@ def obtener_pelicula(codigo):
     peli = peli.split()
     peli = ' '.join(peli)
     return peli
->>>>>>> origin/master
+
+def peliculas_en_comun(u1, u2):
+    
