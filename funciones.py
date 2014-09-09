@@ -16,3 +16,9 @@ def obtener_pelicula(codigo):
     peli = ' '.join(peli)
     return peli
 
+def peliculas_en_comun(usuario1,usuario2,matriz):
+    comun=list()
+    for i in range(1682):
+        if matriz[usuario1-1,i]!=0 and matriz[usuario2-1,i]!=0:
+            comun.append(i+1)
+    return comun
